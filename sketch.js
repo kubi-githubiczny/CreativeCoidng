@@ -48,12 +48,12 @@ function windowResized() {
 function styleButton(btn) {
   btn.style('padding', '10px 20px');
   btn.style('font-size', '16px');
-  btn.style('background-color', '#007BFF');
+  btn.style('background-color', 'rgb(135,55,255)');
   btn.style('color', 'white');
   btn.style('border', 'none');
   btn.style('border-radius', '5px');
   btn.style('cursor', 'pointer');
   btn.style('transition', 'background-color 0.3s');
-  btn.mouseOver(() => btn.style('background-color', '#0056b3'));
-  btn.mouseOut(() => btn.style('background-color', '#007BFF'));
+  btn.mouseOver(() => btn.style('background-color', 'rgb(163,101,255)'));
+  btn.mouseOut(() => btn.style('background-color', 'rgb(135,55,255)'));
 }
