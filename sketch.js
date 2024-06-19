@@ -2,6 +2,7 @@ let button;
 let commentP;
 let clickCount = 0;
 const maxClicks = 10; 
+const showCommentsAfter = 3;
 const comments = [
   "CLICK IT!",
   "Just do it!",
@@ -38,24 +39,27 @@ function draw() {
 
   
 }
-
 function moveButton() {
   clickCount++;
 
   if (clickCount >= maxClicks) {
     nextAction();
   } else {
-   
+    // Przesuwanie przycisku w losowe miejsce
     button.position(random(windowWidth - button.width), random(windowHeight - button.height));
 
-    // Wyświetlanie losowego komentarza
-    const randomComment = random(comments);
-    commentP.html(randomComment);
+    if (clickCount >= showCommentsAfter) {
+      // Wyświetlanie losowego komentarza po 3 kliknięciach
+      const randomComment = random(comments);
+      commentP.html(randomComment);
+    } else {
+      commentP.html('');  // Usunięcie komentarza przed 3 kliknięciem
+    }
   }
 }
 
 function nextAction() {
-
+  // Przekierowanie na określoną stronę po 10 kliknięciach
   window.location.href = "https://pmaksymenko.github.io/errornazaliczenie/";
 }
 
