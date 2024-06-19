@@ -1,11 +1,12 @@
 let button;
 let commentP;
 const comments = [
-  "Kliknij!",
-  "Po prostu kliknij!",
-  "To nie może być aż tak skomplikowane...",
-  "Ty chcesz to anulować w ogóle???",
-  "Niebieski przycisk... Duży niebieski przycisk."
+  "CLICK IT!",
+  "Just do it!",
+  "It can't be that difficult...",
+  "Do you even want to that???",
+  "BIG PURPLE BUTTON.",
+  "Please.......",
 ];
 
 
@@ -13,22 +14,27 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
 
-  button = createButton('ZREZYGNUJ');
+  button = createButton('UNSUBSCRIBE');
   button.position(random(windowWidth - 100), random(windowHeight - 50));
   button.mousePressed(moveButton);
   styleButton(button);
+  button.style('font-family', 'Comic Sans MS, sans-serif');
 
   
   commentP = createP('');
   commentP.position(windowWidth/2, windowHeight/2);
   commentP.style('font-size', '20px');
   commentP.style('color', '255');
-  commentP.style('font-family', 'Arial, sans-serif');
+  commentP.style('font-family', 'Comic Sans MS, sans-serif');
+  
+
+
   
 }
 
 function draw() {
- 
+
+  
 }
 
 function moveButton() {
